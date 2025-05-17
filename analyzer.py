@@ -1,13 +1,12 @@
 # analyzer.py
 
-import csv, ollama, re, time, torch, os
+import csv, ollama, re, time, os
 from PIL import Image
 from surya.recognition import RecognitionPredictor
 from surya.detection import DetectionPredictor
 
 recognition_predictor = RecognitionPredictor()
 detection_predictor = DetectionPredictor()
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 variation_map = {}
 ingredient_data = {}
